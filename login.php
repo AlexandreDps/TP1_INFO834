@@ -20,13 +20,7 @@
   if ($_POST["username"] & $_POST["password"]) {
     $username =  $_POST["username"];
     $password = $_POST["password"];
-    echo "test\n";
-    echo $username;
-    $number = 5;
-    $path = __DIR__ . '/TP1_bdd.py';
-    echo $path;
-
-    $output = shell_exec("python TP1_bdd.py $number");
-    echo $output;
+    $output = shell_exec("python TP1_bdd.py $username");
+    echo utf8_encode($output);
   }
 ?>
